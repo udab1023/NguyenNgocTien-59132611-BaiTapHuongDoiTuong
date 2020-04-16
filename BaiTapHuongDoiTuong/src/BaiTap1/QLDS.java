@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @author ngoct
  */
 public class QLDS implements IQLDS{
-    ArrayList<CaNhan> l= new ArrayList<CaNhan>();
+    ArrayList<CaNhan> l= new ArrayList<>();
     @Override
     public int them (CaNhan p){
         l.add(p);
@@ -21,14 +21,14 @@ public class QLDS implements IQLDS{
     @Override
     public int xoa (String ten){
         l.remove(ten);
+        return 0;
     }
     
     @Override
     public void inDS(){
-        return 0;
-    }
-
-    private int add(String HienThiTT) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Cac ca nhan co trong danh sach la: ");
+        for (int i = 0; i < l.size(); i++) {
+            System.out.println(l.get(i).HienThiTT());
+        }
     }
 }
